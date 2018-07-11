@@ -7,6 +7,7 @@ public class MovePlayerScript : MonoBehaviour {
     bool jump = false;
     public float moveSpeed = 15f;
     public float jumpForce = 15f;
+    public LayerMask groundLayerMask;
 
     void Update()
     {
@@ -31,11 +32,19 @@ public class MovePlayerScript : MonoBehaviour {
         }
         if (jump)
         {
-            Rigidbody2D body = GetComponent<Rigidbody2D>();
-            //TODO Solo si está en el suelo (o si eso doble salto o algo (o una habilidad))
-            body.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            if (isOnTheFloor())
+            {
+                Rigidbody2D body = GetComponent<Rigidbody2D>();
+                //TODO Solo si está en el suelo (o si eso doble salto o algo (o una habilidad))
+                body.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            }
             jump = false;
         }
         
+    }
+
+    private bool isOnTheFloor()
+    {
+        return Physics2D.Raycast(this.transform.position, Vector2.down, 0.6f, groundLayerMask.value);
     }
 }
