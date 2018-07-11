@@ -8,6 +8,12 @@ public class MovePlayerScript : MonoBehaviour {
     public float moveSpeed = 15f;
     public float jumpForce = 15f;
     public LayerMask groundLayerMask;
+    private Rigidbody2D body;
+
+    private void Awake()
+    {
+        body = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
@@ -18,15 +24,14 @@ public class MovePlayerScript : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        if (isOnTheFloor())body.velocity = new Vector2(0, body.velocity.y);
         if (Input.GetKey("d"))
         {
-            Rigidbody2D body = GetComponent<Rigidbody2D>();
             //TODO SI está en el aire que se mueva menos (o agachao, o debuff...) 
             body.velocity = new Vector2(moveSpeed, body.velocity.y);
         }
         if (Input.GetKey("a"))
         {
-            Rigidbody2D body = GetComponent<Rigidbody2D>();
             //TODO SI está en el aire que se mueva menos (o agachao, o debuff...)
             body.velocity = new Vector2(-moveSpeed, body.velocity.y);
         }
@@ -34,7 +39,6 @@ public class MovePlayerScript : MonoBehaviour {
         {
             if (isOnTheFloor())
             {
-                Rigidbody2D body = GetComponent<Rigidbody2D>();
                 //TODO Solo si está en el suelo (o si eso doble salto o algo (o una habilidad))
                 body.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             }
@@ -45,6 +49,6 @@ public class MovePlayerScript : MonoBehaviour {
 
     private bool isOnTheFloor()
     {
-        return Physics2D.Raycast(this.transform.position, Vector2.down, 0.6f, groundLayerMask.value);
+        return Physics2D.Raycast(this.transform.position, Vector2.down, 0.8f, groundLayerMask.value);
     }
 }
