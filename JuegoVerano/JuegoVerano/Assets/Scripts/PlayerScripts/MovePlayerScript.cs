@@ -9,10 +9,16 @@ public class MovePlayerScript : MonoBehaviour {
     public float jumpForce = 15f;
     public LayerMask groundLayerMask;
     private Rigidbody2D body;
+    public Ability[] abilities;
+    //TODO Esto quitarlo, que la inicialización de las habilidades se haga desde CooolDown al elegir en el menú.
+    public GameObject player;
 
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
+        //TODO La inicialización de la habilidad en el script de CoolDown cuando se carga 
+        foreach (Ability ability in abilities)
+            ability.Initialize(player);
     }
 
     void Update()
@@ -43,6 +49,10 @@ public class MovePlayerScript : MonoBehaviour {
                 body.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             }
             jump = false;
+        }
+        if (Input.GetKey("j"))
+        {
+            abilities[0].TriggerAbility();
         }
         
     }

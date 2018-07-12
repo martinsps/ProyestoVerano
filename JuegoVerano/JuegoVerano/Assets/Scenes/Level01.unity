@@ -113,6 +113,34 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &564417877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 564417878}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &564417878
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 564417877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.674, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 669731290}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &669731290 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4964564100887178, guid: 9b3a0b28833e930468b9b52d772b7e68,
@@ -347,6 +375,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114527373234655052, guid: 9b3a0b28833e930468b9b52d772b7e68,
+        type: 2}
+      propertyPath: abilities.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4964564100887178, guid: 9b3a0b28833e930468b9b52d772b7e68, type: 2}
       propertyPath: m_LocalPosition.x
       value: -13.96
@@ -392,6 +425,46 @@ Prefab:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114527373234655052, guid: 9b3a0b28833e930468b9b52d772b7e68,
+        type: 2}
+      propertyPath: abilities.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a1da494cadf35f8419a182248756485b,
+        type: 2}
+    - target: {fileID: 114527373234655052, guid: 9b3a0b28833e930468b9b52d772b7e68,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2003602084}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b3a0b28833e930468b9b52d772b7e68, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2003602084 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1824074027679430, guid: 9b3a0b28833e930468b9b52d772b7e68,
+    type: 2}
+  m_PrefabInternal: {fileID: 2003602083}
+--- !u!114 &2003602085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2003602084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52eefaeb3cb40643ad1421f29dbd14a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 564417878}
+  bullet: {fileID: 0}
+--- !u!114 &2003602086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2003602084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6f125f1055f18c40aa315e6f1a847a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
