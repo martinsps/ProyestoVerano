@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBulletTriggerabe : MonoBehaviour {
+public class FireBulletTriggerable : MonoBehaviour {
 
     public Transform firePoint;
 

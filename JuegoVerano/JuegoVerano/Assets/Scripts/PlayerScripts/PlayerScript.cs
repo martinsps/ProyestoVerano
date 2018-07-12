@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
 
+    public Ability[] abilities;
+
     public static PlayerScript instance;
 
     //Singleton and for using it in other scenes

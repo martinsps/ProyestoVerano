@@ -5,11 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Abilities/FireBullet")]
 public class AbilityFireBullet : Ability {
     public GameObject bullet;
-    private FireBulletTriggerabe launcher;
+    private FireBulletTriggerable launcher;
 
     public override void Initialize(GameObject obj)
     {
-        launcher = obj.GetComponent<FireBulletTriggerabe>();
+        launcher = obj.GetComponent<FireBulletTriggerable>();
         launcher.bullet = bullet;
     }
     public override void TriggerAbility()

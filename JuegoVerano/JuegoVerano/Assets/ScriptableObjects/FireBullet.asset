@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: FireBullet
   m_EditorClassIdentifier: 
   name: FireBullet
-  aSprite: {fileID: 0}
+  aSprite: {fileID: 21300000, guid: b85db59588fe10c48b9cef36e7233fbe, type: 3}
   aSound: {fileID: 0}
-  aBaseCoolDown: 1
+  aBaseCoolDown: 2
   bullet: {fileID: 1100624177863762, guid: a36fe85af370219489766738b64c8528, type: 2}
