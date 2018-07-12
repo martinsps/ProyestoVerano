@@ -13,8 +13,6 @@ public class MovingGroundScript : MonoBehaviour {
 	void Awake () {
         transform.position = firstPosition.position;
         movingToSecond = true;
-   //     body = GetComponent<Rigidbody2D>();
-   //     body.velocity = new Vector2(0, 0);
 	}
 	
 	// Update is called once per frame
