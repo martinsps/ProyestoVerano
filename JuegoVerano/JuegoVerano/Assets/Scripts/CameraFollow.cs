@@ -8,16 +8,19 @@ public class CameraFollow : MonoBehaviour {
 
 	public float dampTime = 0.4f;
 	private Vector3 velocity = Vector3.zero;
-	public Transform target;
+    private Transform target;
 
 
 	void Awake() {
 		Application.targetFrameRate = 60;
-	}
+        target = FindObjectOfType<PlayerScript>().GetComponent<Transform>();
+
+    }
 
 
 	public void ResetToStartPosition() {
-		Vector3 point = GetComponent<Camera>().WorldToViewportPoint(target.position);
+        target = FindObjectOfType<PlayerScript>().GetComponent<Transform>();
+        Vector3 point = GetComponent<Camera>().WorldToViewportPoint(target.position);
 		Vector3 delta = target.position - GetComponent<Camera>().ViewportToWorldPoint(new Vector3(offset.x, offset.y, point.z));
 		Vector3 destination = transform.position + delta;
 		
@@ -27,8 +30,8 @@ public class CameraFollow : MonoBehaviour {
 
 
 	void Update () {
-	
-		Vector3 point = GetComponent<Camera>().WorldToViewportPoint(target.position);
+        target = FindObjectOfType<PlayerScript>().GetComponent<Transform>();
+        Vector3 point = GetComponent<Camera>().WorldToViewportPoint(target.position);
 		Vector3 delta = target.position - GetComponent<Camera>().ViewportToWorldPoint(new Vector3(offset.x, offset.y, point.z));
 		Vector3 destination = transform.position + delta;
 

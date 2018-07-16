@@ -18,6 +18,7 @@ public class PlayerScript : MonoBehaviour {
             DontDestroyOnLoad(gameObject);
         }
 	}
-	
 
-}
+
+
+ }

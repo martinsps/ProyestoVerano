@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be2a57f8b843d4d4c94cab3d587dd64f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2003602084}
   ui: {fileID: 1865457261}
 --- !u!4 &98650629
 Transform:
@@ -155,11 +154,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &669731290 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4964564100887178, guid: 9b3a0b28833e930468b9b52d772b7e68,
-    type: 2}
-  m_PrefabInternal: {fileID: 2003602083}
 --- !u!1 &755331462
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +249,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 0.4, y: 0.12}
   dampTime: 0.4
-  target: {fileID: 669731290}
 --- !u!1001 &924522169
 Prefab:
   m_ObjectHideFlags: 0
@@ -650,11 +643,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114727686596720746, guid: 9b3a0b28833e930468b9b52d772b7e68,
-        type: 2}
-      propertyPath: abilities.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4964564100887178, guid: 9b3a0b28833e930468b9b52d772b7e68, type: 2}
       propertyPath: m_LocalPosition.x
       value: -13.96
@@ -701,3 +689,15 @@ GameObject:
   m_PrefabParentObject: {fileID: 1824074027679430, guid: 9b3a0b28833e930468b9b52d772b7e68,
     type: 2}
   m_PrefabInternal: {fileID: 2003602083}
+--- !u!114 &2003602092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2003602084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd68aeb088cb69e4f830e574b42ac97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 1

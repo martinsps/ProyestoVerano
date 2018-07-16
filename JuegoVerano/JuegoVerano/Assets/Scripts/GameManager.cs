@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
     public Canvas mainMenu;
 
     private const string LevelJugar = "Level01";
-    private const string LevelPersonaje = "";
+    private const string LevelPersonaje = "Character";
 
     // Use this for initialization
     void Awake () {
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour {
 
     public void Personaje()
     {
-        //SceneManager.LoadScene(LevelPersonaje);
+        SceneManager.LoadScene(LevelPersonaje);
     }
 
     public void Salir()

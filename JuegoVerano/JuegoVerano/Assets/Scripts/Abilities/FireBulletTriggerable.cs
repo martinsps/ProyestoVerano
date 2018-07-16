@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class FireBulletTriggerable : MonoBehaviour {
 
-    public Transform firePoint;
+    private Transform firePoint;
 
     [HideInInspector] public GameObject bullet;
 
 	public void Fire()
     {
+        firePoint = GameObject.FindObjectOfType<PlayerScript>().gameObject.transform.GetChild(0);
         Instantiate(bullet, firePoint.position, firePoint.rotation);
     }
 }
