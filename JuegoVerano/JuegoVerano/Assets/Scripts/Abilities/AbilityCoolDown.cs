@@ -63,6 +63,7 @@ public class AbilityCoolDown : MonoBehaviour
         coolDownTimeLeft = coolDownDuration;
         darkMask.enabled = true;
         coolDownTextDisplay.enabled = true;
+
         ability.TriggerAbility();
     }
 }

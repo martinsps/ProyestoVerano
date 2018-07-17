@@ -1,15 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManagement : MonoBehaviour {
     private GameObject player;
-    public Canvas ui;
+    public Canvas ui; 
 
-    void Start()
-    {
-        //Debug.Log("The current scene is " + SceneManager.GetActiveScene().name);
+    void Awake () {
         player = GameObject.FindObjectOfType<PlayerScript>().gameObject;
         Ability[] abilities=player.GetComponent<PlayerScript>().abilities;
         AbilityCoolDown[] buttons = ui.GetComponentsInChildren<AbilityCoolDown>();
