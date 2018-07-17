@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManagement : MonoBehaviour {
-    private GameObject player;
+    public GameObject player;
     public Canvas ui; 
 
-    void Awake () {
-        player = GameObject.FindObjectOfType<PlayerScript>().gameObject;
-        Ability[] abilities=player.GetComponent<PlayerScript>().abilities;
+    void Start () { 
+        Ability[] abilities=FindObjectOfType<GameManager>().abilities;
         AbilityCoolDown[] buttons = ui.GetComponentsInChildren<AbilityCoolDown>();
         if (buttons.Length != abilities.Length)
             Debug.LogError("No están balanceados habilidades y botones");

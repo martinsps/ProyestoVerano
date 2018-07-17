@@ -14,14 +14,14 @@ public class AbilityCoolDown : MonoBehaviour
     private float nextReadyTime;
     private float coolDownTimeLeft;
 
-    public void Initialize(Ability selectedAbility, GameObject weaponHolder)
+    public void Initialize(Ability selectedAbility, GameObject player)
     {
         ability = selectedAbility;
         myButtonImage = GetComponent<Image>();
         myButtonImage.sprite = ability.aSprite;
         darkMask.sprite = ability.aSprite;
         coolDownDuration = ability.aBaseCoolDown;
-        ability.Initialize(weaponHolder);
+        ability.Initialize(player);
         AbilityReady();
     }
 
