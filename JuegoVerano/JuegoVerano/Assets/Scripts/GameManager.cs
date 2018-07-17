@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour {
 	
     public void Jugar()
     {
+       GameObject player = GameObject.FindObjectOfType<PlayerScript>().gameObject;
+        for(int i=0; i< player.GetComponent<PlayerScript>().abilities.Length;i++)
+            Debug.Log(player.GetComponent<PlayerScript>().abilities[i]);
         SceneManager.LoadScene(LevelJugar);
     }
 

@@ -8,7 +8,14 @@ public class FireBulletTriggerable : MonoBehaviour {
 
     [HideInInspector] public GameObject bullet;
 
-	public void Fire()
+    /* public void Start()
+     {
+         firePoint = GameObject.FindObjectOfType<PlayerScript>().gameObject.transform.GetChild(0);
+         o
+         firePoint = transform.GetChild(0);
+     }*/
+
+    public void Fire()
     {
         firePoint = GameObject.FindObjectOfType<PlayerScript>().gameObject.transform.GetChild(0);
         Instantiate(bullet, firePoint.position, firePoint.rotation);

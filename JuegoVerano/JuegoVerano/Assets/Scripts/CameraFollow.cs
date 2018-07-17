@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour {
 
 	void Awake() {
 		Application.targetFrameRate = 60;
-        target = FindObjectOfType<PlayerScript>().GetComponent<Transform>();
+        target = FindObjectOfType<PlayerScript>().GetComponent<Transform>(); //TODO Mismo problema que en el otro, hay que meter en las otras funciones el Find
 
     }
 
