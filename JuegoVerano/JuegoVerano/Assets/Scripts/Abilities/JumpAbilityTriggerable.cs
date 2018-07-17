@@ -10,7 +10,7 @@ public class JumpAbilityTriggerable : MonoBehaviour {
 
     void Start()
     {
-        player=GetComponent<Rigidbody2D>();
+        player = GetComponent<Rigidbody2D>();
     }
 
     public void Jump()
