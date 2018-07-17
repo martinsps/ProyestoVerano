@@ -10,6 +10,7 @@ public class MovePlayerScript : MonoBehaviour {
     public LayerMask groundLayerMask;
     private Rigidbody2D body;
 
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -43,8 +44,7 @@ public class MovePlayerScript : MonoBehaviour {
                 body.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             }
             jump = false;
-        }
-        
+        }        
     }
 
     private bool isOnTheFloor()

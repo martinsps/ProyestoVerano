@@ -4,18 +4,28 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MenuManager : MonoBehaviour {
+public class GameManager : MonoBehaviour {
+
+    public GameManager instance;
 
     public Canvas mainMenu;
 
-    private const string LevelJugar = "Level01";
-    private const string LevelPersonaje = "";
+    public Ability[] abilities;
 
-    // Use this for initialization
-    void Awake () {
-        mainMenu.enabled = true;
-	}
-	
+    private const string LevelJugar = "Level01";
+    private const string LevelPersonaje = "Character";
+
+    void Awake()
+    {
+        if (instance != null)
+            Destroy(gameObject);
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     public void Jugar()
     {
         SceneManager.LoadScene(LevelJugar);
@@ -23,7 +33,7 @@ public class MenuManager : MonoBehaviour {
 
     public void Personaje()
     {
-        //SceneManager.LoadScene(LevelPersonaje);
+        SceneManager.LoadScene(LevelPersonaje);
     }
 
     public void Salir()

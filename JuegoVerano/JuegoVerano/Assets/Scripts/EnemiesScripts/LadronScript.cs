@@ -36,7 +36,7 @@ public class LadronScript : MonoBehaviour {
         canMove = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (canMove)
         {

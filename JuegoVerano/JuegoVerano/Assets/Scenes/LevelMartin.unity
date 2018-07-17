@@ -327,7 +327,7 @@ MonoBehaviour:
   - {fileID: 257187748}
   - {fileID: 1758705735}
   deltaDistance: 0.2
-  movingSpeed: 0.04
+  movingSpeed: 0.1
 --- !u!61 &399698937
 BoxCollider2D:
   m_ObjectHideFlags: 0
