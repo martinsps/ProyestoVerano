@@ -6,26 +6,16 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-    public GameManager instance;
-
     public Canvas mainMenu;
-
-    public Ability[] abilities;
 
     private const string LevelJugar = "Level01";
     private const string LevelPersonaje = "Character";
 
-    void Awake()
-    {
-        if (instance != null)
-            Destroy(gameObject);
-        else
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
-
+    // Use this for initialization
+    void Awake () {
+        mainMenu.enabled = true;
+	}
+	
     public void Jugar()
     {
         SceneManager.LoadScene(LevelJugar);
