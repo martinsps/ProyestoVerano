@@ -8,6 +8,9 @@ public class PlayerScript : MonoBehaviour {
 
     public static PlayerScript instance;
 
+    //Health points of the player
+    public int healthPoints = 100;
+
     //Singleton and for using it in other scenes
     void Awake () {
         if (instance != null)
@@ -18,6 +21,24 @@ public class PlayerScript : MonoBehaviour {
             DontDestroyOnLoad(gameObject);
         }
 	}
+
+    public void Damage(int dmg)
+    {
+        if(healthPoints - dmg <= 0)
+        {
+            healthPoints = 0;
+            Kill();
+        }
+        else
+        {
+            healthPoints -= dmg;
+        }
+    }
+
+    public void Kill()
+    {
+        Debug.Log("Player has been killed");
+    }
 
 
 

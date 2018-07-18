@@ -22,7 +22,7 @@ public class LadronScript : MonoBehaviour {
         if (collision.gameObject.CompareTag("Player"))
         {
             //Debug.Log("Has ganado la partida");
-            LevelManager.instance.WinLevel();
+            LevelManagerMartin.instance.WinLevel();
         }
     }
 
@@ -43,7 +43,7 @@ public class LadronScript : MonoBehaviour {
             if (currentTarget >= targets.Length)
             {
                 // Debug.Log("El ladron llego antes");
-                LevelManager.instance.RestartLevel();
+                LevelManagerMartin.instance.RestartLevel();
             }
             else
             {

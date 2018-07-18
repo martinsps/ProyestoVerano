@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     public Ability[] abilities;
 
     private const string LevelJugar = "Level01";
+    //private const string LevelJugar = "LevelMartin";
     private const string LevelPersonaje = "Character";
 
     void Awake()
