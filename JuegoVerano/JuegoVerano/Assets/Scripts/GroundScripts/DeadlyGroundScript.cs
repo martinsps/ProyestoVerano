@@ -9,7 +9,8 @@ public class DeadlyGroundScript : MonoBehaviour {
         if(collision.tag == "Player")
         {
             //KILLPLAYER
-            GameManager.instance.KillPlayer();
+            //GameManager.instance.KillPlayer();
+            Debug.Log("El player murió");
         }
     }
 }

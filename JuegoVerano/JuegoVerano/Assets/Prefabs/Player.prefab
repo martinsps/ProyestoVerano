@@ -45,7 +45,7 @@ GameObject:
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilities:
-  - {fileID: 11400000, guid: a1da494cadf35f8419a182248756485b, type: 2}
+  - {fileID: 11400000, guid: 9d62c61cf4b4d8341a6980834089fbe5, type: 2}
 --- !u!114 &114983326393935456
 MonoBehaviour:
   m_ObjectHideFlags: 1
