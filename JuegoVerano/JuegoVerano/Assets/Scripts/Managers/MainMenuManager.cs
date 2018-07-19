@@ -1,31 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using UnityEngine;
 
-public class GameManager : MonoBehaviour {
-
-    public GameManager instance;
+public class MainMenuManager : MonoBehaviour {
 
     public Canvas mainMenu;
-
-    public Ability[] abilities;
 
     private const string LevelJugar = "Level01";
     //private const string LevelJugar = "LevelMartin";
     private const string LevelPersonaje = "Character";
-
-    void Awake()
-    {
-        if (instance != null)
-            Destroy(gameObject);
-        else
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
 
     public void Jugar()
     {
@@ -42,5 +26,5 @@ public class GameManager : MonoBehaviour {
         Debug.Log("Salimos del programa.");
         Application.Quit();
     }
-	
+
 }
