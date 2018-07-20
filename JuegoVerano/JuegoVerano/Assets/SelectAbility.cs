@@ -12,6 +12,7 @@ public class SelectAbility : MonoBehaviour {
 
 	void Start () {
         buttonText.text = selectedAbility.getName();
+        transform.SetAsLastSibling();
 	}
 
 	void Update () {
