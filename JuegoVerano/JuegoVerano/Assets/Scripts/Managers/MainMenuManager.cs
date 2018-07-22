@@ -10,6 +10,7 @@ public class MainMenuManager : MonoBehaviour {
     private const string LevelJugar = "Level01";
     //private const string LevelJugar = "LevelMartin";
     private const string LevelPersonaje = "Character";
+    private const string MenuOpciones = "Options";
 
     public void Jugar()
     {
@@ -19,6 +20,11 @@ public class MainMenuManager : MonoBehaviour {
     public void Personaje()
     {
         SceneManager.LoadScene(LevelPersonaje);
+    }
+
+    public void Opciones()
+    {
+        SceneManager.LoadScene(MenuOpciones);
     }
 
     public void Salir()

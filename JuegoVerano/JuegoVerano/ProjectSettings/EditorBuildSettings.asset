@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelMartin.unity
     guid: 24d22ff384a63eb428bd579bb01ae537
+  - enabled: 1
+    path: Assets/Scenes/Options.unity
+    guid: 50f1c1e062a136b4b96a753a7cfc0bcc
   m_configObjects: {}
