@@ -7,23 +7,25 @@ public class AbilityButton : MonoBehaviour {
 
     public Ability ability;
 
-    //private Animator buttonAnimator;
+    private Animator buttonAnimator;
 
     private SelectAbility parentButton;
+
+    private const string boolVar = "b_show";
 
 
     // Use this for initialization
     void Start () {
         buttonText = GetComponentInChildren<Text>(); 
         buttonText.text = ability.getName();
-        //buttonAnimator = GetComponent<Animator>();
+        buttonAnimator = GetComponent<Animator>();
         parentButton = GetComponentInParent<SelectAbility>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //buttonAnimator.setBool("b_show", parentButton.showMenu);
+        buttonAnimator.SetBool(boolVar, parentButton.showMenu);
     }
 
     public void buttonPressed()

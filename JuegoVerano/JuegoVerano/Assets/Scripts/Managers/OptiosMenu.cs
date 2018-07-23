@@ -37,7 +37,9 @@ public class OptiosMenu : MonoBehaviour {
     {
         Debug.Log("Cambio sonido");
         manager.ChangeSoundState();
+        imageBotonSound.enabled = !manager.soundOn;
         
+
 
     }
 
@@ -45,12 +47,12 @@ public class OptiosMenu : MonoBehaviour {
     {
         Debug.Log("Cambio efecto");
         manager.ChangEffectsState();
-
-
+        imageBotonEfecto.enabled = !manager.effectsOn;
+        
     }
 
 
- 
+
 
     public void Return()
     {
