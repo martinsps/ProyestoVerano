@@ -1103,6 +1103,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 61392091118232494, guid: b7bfcb94eb16ab54fb12ce558f3699c4,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7bfcb94eb16ab54fb12ce558f3699c4, type: 2}
   m_IsPrefabParent: 0
